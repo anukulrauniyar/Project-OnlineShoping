@@ -6,6 +6,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
+import com.ecommerce.models.Customer;
+
 @Repository
 @Transactional
 public class CustomerDaoImpl  implements CustomerDao{
@@ -16,6 +18,6 @@ public class CustomerDaoImpl  implements CustomerDao{
 	   
 	   public void registerCustomer(Customer customer) {
 		   Session session=sessionFactory.getCurrentSession();
-		   session.save(customer)
+		   session.save(customer);
 	   }
 }
