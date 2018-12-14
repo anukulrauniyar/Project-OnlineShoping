@@ -1,7 +1,10 @@
 package com.ecommerce.dao;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -62,6 +65,12 @@ private SessionFactory sessionFactory;
 		if(product!=null)
 			session.delete(product);
 		
+	}
+
+	@Override
+	public List<Product> getAllProducts() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
 

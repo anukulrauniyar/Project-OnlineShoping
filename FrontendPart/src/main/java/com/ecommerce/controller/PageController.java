@@ -8,7 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class PageController {
      @RequestMapping(value = {"/","home","/index"})
      
-     public ModalAndView index() {
+     public ModelAndView index() {
     	 ModelAndView mv = new ModelAndView("page");
     	 mv.addObject("getting","Welcome to Spring Web MVC");
     	 return mv;
